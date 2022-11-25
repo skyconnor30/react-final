@@ -3,6 +3,7 @@ import { Button, Container, Form, Table } from "react-bootstrap";
 import { evaluate } from 'mathjs'
 import 'chart.js/auto'
 import { Line } from "react-chartjs-2";
+import SecantCSS from "./headder.module.css";
 
 const Secant = () => {
     const print = () =>{
@@ -98,7 +99,6 @@ const Secant = () => {
         ]
     }
    
-   
     //const [Data,setData] = useState([])
     const [html, setHtml] = useState(null);
     const [Equation,setEquation] = useState("(x^2)-7")
@@ -142,7 +142,7 @@ const Secant = () => {
     return (
             <Container>
                 <Form >
-                    <h3 style={{color: 'Black',fontWeight : 'bold'}}>Secant Method</h3>
+                    <h3 className={SecantCSS.h3}>Secant Method</h3>
                     <Form.Group className="mb-3">
                     <Form.Label>Input f(x)</Form.Label>
                         <input type="text" id="equation" value={Equation} placeholder="Equation" onChange={inputEquation} style={{width:"20%", margin:"0 auto"}} className="form-control"></input>
@@ -182,3 +182,4 @@ const Secant = () => {
 
 
 export default Secant
+
